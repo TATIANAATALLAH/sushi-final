@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Page</title>
+    <link rel="stylesheet" href="css/delivery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-button">Home</a>
+        <a href="menu.html" class="nav-button">Menu</a>
+        <a href="contact.html" class="nav-button">Contact Us</a>
+        <a href="about.html" class="nav-button">About</a>
+        <a href="review.html" class="nav-button">reviews</a>
+    
+        <a href="delivery.html" class="nav-button">delivery</a>
+        <a href="reservation.html" class="nav-button">reservation</a>
+        <a href="feedbacks.html" class="nav-button">feedbakcs</a>
+    </nav>
+
+    <!-- Delivery Section -->
+    <section class="delivery-section">
+        <div class="delivery-container">
+            <h2>Delivery Details</h2>
+            <form action="process-delivery.php" method="POST" class="delivery-form">
+                <!-- Customer Name -->
+                <div class="form-group">
+                    <label for="customer-name"><i class="fas fa-user"></i> Customer Name</label>
+                    <input type="text" id="customer-name" name="customer-name" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="form-group">
+                    <label for="phone-number"><i class="fas fa-phone"></i> Phone Number</label>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your phone number" required>
+                </div>
+
+                <!-- Village Name -->
+                <div class="form-group">
+                    <label for="village"><i class="fas fa-map-marker-alt"></i> Village Name</label>
+                    <input type="text" id="village" name="village" placeholder="Enter the name of the village" required>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group">
+                    <label for="address"><i class="fas fa-home"></i> Address</label>
+                    <textarea id="address" name="address" rows="3" placeholder="Enter your full address" required></textarea>
+                </div>
+
+                <!-- Taxi Number -->
+                <div class="form-group">
+                    <label for="taxi-number"><i class="fas fa-taxi"></i> Taxi Number</label>
+                    <input type="text" id="taxi-number" name="taxi-number" placeholder="Enter the taxi number" required>
+                </div>
+
+                <!-- Delivery Instructions -->
+                <div class="form-group">
+                    <label for="instructions"><i class="fas fa-sticky-note"></i> Delivery Instructions</label>
+                    <textarea id="instructions" name="instructions" rows="3" placeholder="Enter any special instructions"></textarea>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="form-group">
+                    <label for="payment-method"><i class="fas fa-credit-card"></i> Payment Method</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="" disabled selected>Select a payment method</option>
+                        <option value="cash">Cash on Delivery</option>
+                        <option value="card">Credit/Debit Card</option>
+                        <option value="online">Online Payment</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="delivery-button">Submit Delivery Details</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
